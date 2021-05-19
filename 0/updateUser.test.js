@@ -52,7 +52,7 @@ describe("updateUser", () => {
     expect(updatedUser.phoneNumber).toBe("+31611223344");
   });
 
-  test("should return a new object and not mutate the original object", () => {
+  test.only("should return a new object and not mutate the original object", () => {
     const user = {
       id: 42,
       firstName: "Rein",
