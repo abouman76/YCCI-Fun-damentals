@@ -22,12 +22,23 @@
 // module.exports = updateUser;
 
 // test 4:
-const updateUser = (user, newData) => {
-  user.firstName = newData.firstName;
-  user.lastName = newData.lastName;
-  user.email = newData.email;
-  user.phoneNumber = newData.phoneNumber;
+// const updateUser = (user, newData) => {
+//   let newObject = { ...user, ...newData };
 
-  return user;
+//   return newObject;
+// };
+// module.exports = updateUser;
+
+// test 5:
+// const updateUser = (user, { id, ...rest }) => {
+//   let newObject = { ...user, ...rest };
+
+//   return newObject;
+// };
+// module.exports = updateUser;
+
+// test 5 korte versie
+const updateUser = (user, { id, ...rest }) => {
+  return { ...user, ...rest };
 };
 module.exports = updateUser;
