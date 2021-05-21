@@ -20,6 +20,7 @@ describe("updateUser", () => {
 
     const updatedUser = updateUser(user, newData);
 
+    expect(updatedUser).toBeDefined();
     expect(updatedUser.id).toBe(42);
     expect(updatedUser.firstName).toBe("Rein");
     expect(updatedUser.lastName).toBe("Op 't Land");
