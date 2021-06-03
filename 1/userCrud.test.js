@@ -133,7 +133,7 @@ describe("User management", () => {
     });
   });
 
-  describe("addUser", () => {
+  describe.only("addUser", () => {
     test("should take an array of users and the data to create a new user and return an array where the new user is added", () => {
       const users = [
         {
@@ -200,7 +200,7 @@ describe("User management", () => {
       expect(updatedUsers[2].id).toBe(3);
     });
 
-    test("should return a generate a new object for the new user instead of returning a reference to the original data", () => {
+    test("should return a new object for the new user instead of returning a reference to the original data", () => {
       const users = [
         {
           id: 1,
